@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login.urls')),
     path('account/', include('accounts.urls')),
+    # TODO: Uncomment these lines when the other apps are ready
     # path('student/', include('student.urls')),
     # path('faculty/', include('faculty.urls')),
     # path('advisor/', include('advisor.urls')),
