@@ -7,6 +7,7 @@ def user_login(request):
     if request.method == 'POST':
         user_id = request.POST.get('user_id')
         password = request.POST.get('password')
+        print(user_id, password)
 
         # Custom logic to check the database for the user
         try:
