@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  aside {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 0 0 #ddd;
+  }
+  
+  #search-section label {
+    font-weight: bold;
+  }
+  
+  #search-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #search-section nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #search-section nav ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info-card {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%; /* Adjust width as per your design */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .info-card h2 {
+    color: #333;
+  }
+  
+  .info-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .info-card ul li {
+    padding: 5px 0;
+  }
+  
+  #chat-interface {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  #chat-input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  #send-btn {
+    padding: 10px 20px;
+  }
+  
+  /* Additional styles for responsive behavior and aesthetics may be necessary */
+  
