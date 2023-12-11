@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Courses</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            width: 200px;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .tab {
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: #fff;
+            font-size: 16px;
+            text-align: left;
+            width: 100%;
+            background-color: #555; /* Background color for unselected tabs */
+        }
+
+        .description {
+            display: none;
+        }
+
+        .description.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <button class="tab" onclick="openTab('architecture')">Architecture</button>
+        <button class="tab" onclick="openTab('chemicalEngineering')">Chemical Engineering</button>
+        <button class="tab" onclick="openTab('civilEngineering', event)">Civil and Environmental Engineering</button>
+        <button class="tab" onclick="openTab('electricalEngineering', event)">Electrical Engineering</button>
+        <button class="tab" onclick="openTab('compSci', event)">Computer Science</button>
+</div>
+    </div>
+
+    <div class="content">
+        <div id="architecture" class="description">
+            <h2>Architecture Courses</h2>
+            <button class="tab" onclick="displayCourse('arch160')">ARCH 160 Foundations in Design I (5 credits)</button>
+            <div>
+                <p>A studio course that introduces students to architectural representation. Orthographic projections, descriptive geometry, contours, paraline drawings, shade and shadows and model making are presented and applied.</p>
+                <p>Prerequisites: none</p>
+            </div>
+            <button class="tab" onclick="displayCourse('arch161')">ARCH 161 Foundations in Design II (5 credits)</button>
+            <div>
+                <p>This course develops the techniques introduced in Foundations in Design I and introduces freehand/estimated perspective, presentation composition and basic rendering techniques.</p>
+                <p>Prerequisites: ARCH 160</p>
+            </div>
+            <button class="tab" onclick="displayCourse('arch199')">ARCH 199 Design I (6 credits)</button>
+            <div>
+                <p>This first course of the eight-semester design sequence develops principles of architecture in a studio setting. Projects explore notions of space definition, landscape intensification and transformation, space organization and elementary construction technologies.</p>
+                <p>Prerequisites: ARCH 100; ARCH 150 or ARCH 160: ARCH 151 or ARCH 161</p>
+            </div>
+            <button class="tab" onclick="displayCourse('arch200')">ARCH 200 Design II (6 credits)</button>
+            <div>
+                <p>Continuation of Design I. The level of complexity of the projects is increased. Issues of intention and image are introduced. Natural, suburban and urban sites are used to broaden student awareness of the environment. Ordering principles are related to function and to site conditions..</p>
+                <p>Prerequisites: ARCH 199</p>
+            </div>
+        </div>
+        <div id="chemicalEngineering" class="description">
+            <h2>Chemical Engineering Courses</h2>
+            <button class="tab" onclick="displayCourse('egpp101')">EGPP-101 - Introduction to Engineering, 2 Credits</button>
+            <div>
+                <p>Course introduces and engages first year engineering students to and in the process of innovation in engineering design; the engineering profession and its impact on issues of relevance to society; and non-technical skills critical to professional success.</p>
+                <p>Prerequisites: none</p>
+            </div>
+            <button class="tab" onclick="displayCourse('cheg102')">CHEG-102 - Introduction to Engineering Design, 3 Credits</button>
+            <div>
+                <p>Introductory course on understanding chemical process design within the context of technological, social, cultural and intellectual developments; The course will help students to appreciate and understand the intellectual framework of engineering and the critical thinking that goes into it; Students will be expected to incorporate an understanding of the role of economic, safety, environmental and ethical considerations into the practice of engineering; and understand the way data is obtained and analyzed with an introduction to software packages that will be utilized in the chemical engineering program; and to provide students the skills and background necessary to be able to interpret data and discuss and communicate results and conclusions.</p>
+                <p>Corequisites: CHEM 003</p>
+            </div>
+            <button class="tab" onclick="displayCourse('cheg201')">CHEG-201 - Chemical Engineering Material Balances, 3 Credits</button>
+            <div>
+                <p>Course involves the application of energy balances to chemical engineering operations and processes that involve non-reactive and reactive systems. The first law of thermodynamics and the correlation of chemical and physical properties are treated along with chemical and phase equilibria.</p>
+                <p>Prerequisites: MATH 156 & CHEM 003</p>
+            </div>
+        </div>
+        <div id="civilEngineering" class="description">
+            <h2>Civil Engineering Courses</h2>
+            <button class="tab" onclick="displayCourse('cieg104')">CIEG-104. Civil Engineering Software & Design, 3 credits</button>
+            <div>
+                <p>Civil engineering involves the planning, design, construction, and operation of facilities that support the quality of life for all people, from road networks to water treatment systems to buildings and their foundations.  This course will utilize a variety of teaching and learning techniques to introduce students to the civil engineering discipline, including the concentration areas of transportation, environmental, water resources, structural, and geotechnical engineering.  Students will work individually to conduct research on civil engineering topics and familiarize themselves with skills/tools needed for success in the field including the following: technical writing, MathCAD, and AutoCAD.</p>
+                <p>Prerequisites: EGPP-101</p>
+            </div>
+            <button class="tab" onclick="displayCourse('cieg202')">CIEG-202. Statics, 3 credits. </button>
+            <div>
+                <p>Introduction to vectors, pseudo-graphical and analytical micro-computer aided resolution and composition of forces; equilibrium of collinear, concurrent, and non-concurrent two and three dimensional force systems, as applied to particles and rigid bodies. Coulomb friction; Hooke’s law; introductory application of equilibrium, compatibility, and constitutive relations in the determination of forces moments, displacements and rotations of simple deformable bodies and biomechanical systems, using simple computer aids. </p>
+                <p>Prerequisites: MATH-157, PHYS-013</p>
+            </div>
+            <button class="tab" onclick="displayCourse('cheg201')">CHEG-201 - Chemical Engineering Material Balances, 3 Credits</button>
+            <div>
+                <p>Course involves the application of energy balances to chemical engineering operations and processes that involve non-reactive and reactive systems. The first law of thermodynamics and the correlation of chemical and physical properties are treated along with chemical and phase equilibria.</p>
+                <p>Prerequisites: MATH 156 & CHEM 003</p>
+            </div>
+        </div>
+        <div id="electricalEngineering" class="description">
+            <h2>Electrical Engineering Courses</h2>
+            <button class="tab" onclick="displayCourse('EECE102')">EECE-102 - Intro to Elec & Comp Eng, 1 Credit</button>
+            <div>
+                <p>Continuation of EGPP-101 as related to the electrical and computer engineering profession. Organized in to five Blocks: Descriptive, Environment, Technical, Practical (Hands on), and Projects, students are introduced to various engineering issues related to the profession of electrical and computer engineering. Historical perspectives and Electrical Engineering Education/Profession and Design are reviewed. Ethics, social/ environmental/cultural/religious issues facing electrical engineers in a global work environment are discussed. An overview of electrical engineering discipline and five major classifications of electrical systems in communication, computer, control, power, and signal processing are presented. Technical aspects and safety considerations of a typical electrical engineering laboratory are introduced. A capstone term project requires assembling an electrical system (e.g., a robot kit) and its study and presentation from a systems point of view.</p>
+                <p>Prerequisites: EGPP-101</p>
+            </div>
+            <button class="tab" onclick="displayCourse('eece156')">EECE-156 - Math I Lab, 1 Credit </button>
+            <div>
+                <p>The purpose of this course is to develop students' problem solving skills, and improve their understanding of the calculus techniques and concepts they learn in Math 156 (Calculus I). Topics include: Algebra Review, Limits, Continuity, Derivative: definition, rules: sum, quotient, product, power, chain, Implicit Differentiation, Applications of the Derivative: related rates, max/min problems, L’Hospital’s Rule, Anti-derivative, Integration. </p>
+                <p>Corequisites: MATH-156</p>
+            </div>
+            <button class="tab" onclick="displayCourse('eece157')">EECE-157 - Math Lab II, 1 Credit</button>
+            <div>
+                <p>The purpose of this course is to further develop students' problem solving skills, improve their understanding of the calculus techniques and concepts they learn in Math 157 (Calculus II), and help them see how calculus can be used to solve engineering problems. Topics include: integration techniques, applications of integration, polar functions and parametric functions, sequences and series.</p>
+                <p>Prerequisites: MATH 156</p>
+                <p>Corequisites: MATH 157</p>
+            </div>
+        </div>
+        <div id="compSci" class="description">
+            <h2>Computer Science Courses</h2>
+            <button class="tab" onclick="displayCourse('csc100')">CSCI-100- Intro to Computer Science, 3 Credits</button>                <p></p>
+                <p>This course introduces the fundamentals of systems and computer science. A brief examination of critical, creative, systems and scientific thinking, is followed by more details on computational thinking. The focus is hands on computing exercises and group exercises that stress the importance of algorithms and problem solving. Students are exposed to the research agenda of the department, the different track options and career opportunities along the different tracks.</p>
+                <p>Prerequisites: None</p>
+            </div>
+            <button class="tab" onclick="displayCourse('csci140')">CSCI-140- Programming Team, 1 Credits</button>
+            <div>
+                <p>This course is for participants of the programming team. </p>
+                <p>Prerequisites: None</p>
+            </div>
+            <button class="tab" onclick="displayCourse('csci135')">CSCI-135- Computer Science I, 4 Credits</button>
+            <div>
+                <p>This course provides an introduction to the discipline of computer programming. Closed laboratory to reinforce lecture topics and introduce new topics. Course is designed to expose students to basic programming concepts and to the use of the C++ language. This course is designed to enhance the student’s ability to design, develop and test/debug programs. Each student will increase his or her skill in writing correct and maintainable programs. Emphasis will be placed on problem analysis and on the subsequent development of algorithms. Several standard data types will be discussed and the student will gain an understanding of the issues relating to the use, design and implementation of each type in C++. A major focus of the lectures will be to provide an overview of real-world problem solving concepts and top-down software design.  </p>
+                <p>Prerequisites: CSCI 100</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci136')">CSCI-136- Computer Science II, 3 Credits</button>
+            <div>
+                <p>Course exposes students to the software development life cycle with a focus on the concepts and use of the object-oriented paradigm in problem analysis, solution design, software development and implementation.  This course is designed to enhance the student’s ability to engineer software that is efficient, maintainable and cost efficient over its entire life cycle. Data abstraction is discussed in depth and students gain experience in the use of classes, object and member functions.  Students gain an understanding of the development of reusable abstract data types.  Software reuse is emphasized and object-oriented concepts are used throughout the course. O-notation and the complexity of algorithms are discussed at relevant points in the course. </p>
+                <p>Prerequisites: CSCI 135 with an 'A' or higher.</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci165')">CSCI-165- Scientific Computing for Engineers, 3 Credits</button>
+            <div>
+                <p>Introduces programming and use of digital computers through symbolic programming. Programming includes general problem-solving and the systematic development of algorithms; use includes the coding of programs and practical experience in Maxima or Matlab.</p>
+                <p>Prerequisites: None</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci201')">CSCI-201- Computer Organization I, 3 Credits</button>
+            <div>
+                <p>This course will cover the fundamentals required to understand the relationship between computer hardware and software. Topics include data representation on computers, computer arithmetic, Boolean algebra and digital logic, and assembly programming in MIPS. Prereq: Computer Science I</p>
+                <p>Prerequisites: CSCI 135</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci202')">CSCI-202- Computer Organization II, 3 Credits</button>
+            <div>
+                <p>This course will present the relationship between computer hardware and software, and the fundamental knowledge essential for understanding and designing the operations of computer systems. Topics include performance evaluation, non-pipelined and pipelined datapath, memory hierarchies, and I/O devices. </p>
+                <p>Prerequisites: CSCI 201</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci211')">CSCI-211 - Unix Lab, 1 Credit</button>
+            <div>
+                <p>This course will present the basic concepts of LINUX and UNIX operating systems. Topics that will be examined include Vi editor, Linux Command, directories, Disks and File systems, Users and Groups, File Permissions, Processes, file compression, basic network use, manage files, create and modify files, and Shell script.</p>
+                <p>Prerequisites: None</p> 
+            </div> 
+            <button class="tab" onclick="displayCourse('csci203')">CSCI-203- Object-Oriented Programming using Java, 1 Credit</button>
+            <div>
+                <p>This course provides an introduction to Java programming and object-oriented programming concepts for students with previous programming experience in C/C++. The course provides a comprehensive overview of basic programming concepts in the Java programming language using an object-oriented approach.</p>
+                <p>Prerequisites: CSCI 135</p> 
+            </div> 
+            <button class="tab" onclick="displayCourse('csci263')">CSCI-263- Web Makers, 3 Credits</button>
+            <div>
+                <p>Interested in learning web development but not sure where to start? Come join web makers and you will have your first web server up in one class! In this class, students will start with the basics and work up to a deep dive into making for the web. Students will be learning HTML, CSS and Javascript. This class will be about creation and students will become the maker. While no previous knowledge of web development is required, makers will be expected to have a working knowledge of programming concepts. Makers must be motivated to explore the syntactic nuances of these languages independently.  </p>
+                <p>Prerequisites: CSCI 100, or some programming experience.</p> 
+            </div> <button class="tab" onclick="displayCourse('csci341')">CSCI-341- Theory of Computation, 3 Credits</button>
+            <div>
+                <p>Introduction to the classical theory of computer science. A study of the formal relationships between machines, languages and grammars; we will cover regular, context-free, context-sensitive, recursive and recursive enumerable languages. Sequential machines and their applications to devices, processes, and programming. Models of computation: finite state automata, push down automata, Turing machines. The role of non-determinism. Prereq: Computer Science II and Discrete Structures.</p>
+                <p>Prerequisites: CSCI 136 and MATH 181</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci350')">CSCI-350 - Structure of Programming Languages, 3 Credits</button>
+            <div>
+                <p>The course will teach students the basic components of the design and analysis of computer programming languages as well as the fundamental computation theory that is required to understand those concepts. The course will also cover several non-imperative languages (unlike C, such as LISP and Prolog) to expose students to the diversity of programming languages. </p>
+                <p>Prerequisites: CSCI 201 and CSCI 341</p> 
+            </div>
+            <button class="tab" onclick="displayCourse('csci354')">CSCI-354- Computer Science III, 3 Credits</button>
+            <div>
+                <p>The course continues the study of data structures and algorithms, focusing on algorithmic design and problem analysis and the relationships between data representation, algorithm design, and program efficiency. Topics include advanced data structures, key algorithm design techniques, analysis of the time and space requirements of algorithms, and the subsequent development of solution of systems. Concrete examples will be drawn from a variety of domains, such as algorithms for trees and graphs, indexing and search, and real-world problems.  </p>
+                <p>Prerequisites: CSCI 136 with a 'C' or better.</p> 
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            var contentSections = document.querySelectorAll('.description');
+            contentSections.forEach(section => section.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        function displayCourse(courseId) {
+            var descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(description => description.classList.remove('active'));
+
+            var courseDescription = document.getElementById(courseId);
+            if (courseDescription) {
+                courseDescription.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

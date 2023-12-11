@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Grades</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Grades</h2>
+    <form id="gradesForm">
+        <label for="course_code">Course Code:</label>
+        <input type="text" id="course_code" required>
+
+        <label for="grade">Grade (A, B, C, D, F):</label>
+        <input type="text" id="grade" pattern="[A-D,F]" title="Valid grades are A, B, C, D, F" required>
+
+        <input type="button" value="Submit" onclick="processGrades()">
+    </form>
+
+    <h2>Entered Grades</h2>
+    <ul id="enteredGrades"></ul>
+
+    <script>
+        function processGrades() {
+            var courseCode = document.getElementById('course_code').value;
+            var grade = document.getElementById('grade').value;
+
+            // Validate the grade (A, B, C, D, F)
+            var validGrades = ['A', 'B', 'C', 'D', 'F'];
+            if (!validGrades.includes(grade)) {
+                alert("Invalid grade. Valid grades are A, B, C, D, F.");
+                return;
+            }
+
+            // Retrieve existing grades from Local Storage
+            var existingGrades = JSON.parse(localStorage.getItem('grades')) || [];
+
+            // Add the new entry
+            existingGrades.push({ courseCode: courseCode, grade: grade });
+
+            // Save the updated grades to Local Storage
+            localStorage.setItem('grades', JSON.stringify(existingGrades));
+
+            // Update the displayed grades
+            displayGrades();
+        }
+
+        function displayGrades() {
+            var enteredGradesList = document.getElementById('enteredGrades');
+            var existingGrades = JSON.parse(localStorage.getItem('grades')) || [];
+
+            enteredGradesList.innerHTML = '';
+
+            existingGrades.forEach(function(entry) {
+                var listItem = document.createElement('li');
+                listItem.textContent = entry.courseCode + ': ' + entry.grade;
+                enteredGradesList.appendChild(listItem);
+            });
+        }
+
+        // Display existing grades on page load
+        displayGrades();
+    </script>
+</body>
+</html>
