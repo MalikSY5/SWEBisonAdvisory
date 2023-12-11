@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Advisor Dashboard</title>
+<link rel="stylesheet" href="advisor.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Welcome, Advisor Name!</h1>
+    <div class="notifications">
+      <img src="email-icon.png" alt="Email">
+      <img src="bell-icon.png" alt="Notifications">
+    </div>
+  </header>
+  <aside>
+    <div id="student-search">
+      <input type="search" id="search-box" placeholder="Search student...">
+      <ul id="student-list">
+        <!-- Student names will be listed here -->
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <section id="student-details">
+      <h2>ADAMS, Lauren</h2>
+      <p><strong>Major:</strong> Computer Science</p>
+      <p><strong>Minor:</strong> Physics</p>
+      <p><strong>ID:</strong> 12345678</p>
+      <p><strong>Registration Pin:</strong> 000000</p>
+      <p><strong>Graduation:</strong> Spring 2025</p>
+      <p><strong>GPA:</strong> 3.5</p>
+      <p><strong>Credits:</strong> 90/120</p>
+      <div id="course-status">
+        <select>
+          <option value="completed">Completed</option>
+          <option value="in-progress">In Progress</option>
+          <option value="required">Required</option>
+        </select>
+      </div>
+    </section>
+    <section id="chat-bot">
+      <div id="chat-interface">
+        <div id="chat-output">
+          <!-- Chat output will go here -->
+        </div>
+        <input type="text" id="chat-input" placeholder="Type your question...">
+        <button id="send-btn">Send</button>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

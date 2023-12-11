@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="student.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Welcome, Student Name!</h1>
+    <div class="notifications">
+      <img src="email-icon.png" alt="Email">
+      <img src="bell-icon.png" alt="Notifications">
+    </div>
+  </header>
+  <div class="main-content">
+    <aside>
+      <div id="search-section">
+        <label for="search-box">SEARCH</label>
+        <input type="search" id="search-box" placeholder="course">
+        <p>We found 3 results for "course"...</p>
+        <nav>
+          <ul>
+            <li>Course descriptions</li>
+            <li>Course prerequisites</li>
+            <li>Courses by major</li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main>
+      <section id="catalogue">
+        <h2>Catalogue</h2>
+        <ul class="catalogue-list">
+          <li>SOB</li>
+          <li>COAS</li>
+          <li>CEA
+            <ul>
+              <li>Mechanical Engineering</li>
+              <li class="active">Computer Science
+                <ul>
+                  <li>Graduation Checklist</li>
+                  <li>Course Descriptions</li>
+                  <li>Course Prerequisites</li>
+                  <li>Handbook</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="chat-bot">
+        <h2>Ask our virtual chat bot, Benny any advising questions!</h2>
+        <div id="chat-interface">
+          <input type="text" id="chat-input" placeholder="What are the software engineering prerequisites?">
+          <button id="send-btn">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="student.js"></script>
+</body>
+</html>

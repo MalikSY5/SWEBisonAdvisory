@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Welcome, Admin Name!</h1>
+    <div class="notifications">
+      <img src="email-icon.png" alt="Email">
+      <img src="bell-icon.png" alt="Notifications">
+    </div>
+  </header>
+  <div class="main-content">
+    <aside>
+      <div id="search-section">
+        <label for="search-box">SEARCH</label>
+        <input type="search" id="search-box" placeholder="course">
+        <p>We found 3 results for "course"...</p>
+        <nav>
+          <ul>
+            <li>Course descriptions</li>
+            <li>Course prerequisites</li>
+            <li>Courses by major</li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main>
+      <div class="info-card">
+        <h2>Administration</h2>
+        <ul>
+          <li>Upcoming classes</li>
+          <li>Student accounts</li>
+          <li>Professor accounts</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h2>Major Requirements</h2>
+        <ul>
+          <li>Course Info</li>
+          <li>Prerequisites</li>
+          <li>Checklists</li>
+        </ul>
+      </div>
+      <section id="chat-bot">
+        <h2>Ask our virtual chat bot, Benny any admin questions!</h2>
+        <div id="chat-interface">
+          <input type="text" id="chat-input" placeholder="What are the software engineering prerequisites?">
+          <button id="send-btn">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

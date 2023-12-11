@@ -4,9 +4,19 @@ venv/
 # Ignore Python compiled files
 *.pyc
 
-# Ignore Python cache directories
+# Django
+*.log
+*.pot
+*.pyc
 __pycache__/
-.pytest_cache/
+local_settings.py
+db.sqlite3
+/media
+/static
+*.pyo
+
+# Ignore all Django migration files
+**/migrations/*
 
 # Ignore IDE settings
 .vscode/
