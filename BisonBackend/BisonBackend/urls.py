@@ -25,4 +25,6 @@ urlpatterns = [
     # path('student/', include('student.urls')),
     # path('faculty/', include('faculty.urls')),
     # path('advisor/', include('advisor.urls')),
+    path('chatbot/', include('chatbot.urls')),  # This includes the urls from chatbot app
+
 ]

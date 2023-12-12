@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'student',
     'dean',
     'advisor',
+    'chatbot',
 ]
 
 MIDDLEWARE = [
